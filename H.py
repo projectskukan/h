@@ -59,7 +59,6 @@ def clear():
     else:os.system("clear")
 ### BAGIAN LOGO ###
 def logo():
-	os.system("clear")
 	print("""%s
  \x1b[1;92m _________             \x1b[1;93m_____    _______   \x1b[1;92m__________
  \x1b[1;92m/   _____/            \x1b[1;93m/  _  \   \      \  \x1b[1;92m\____    /
