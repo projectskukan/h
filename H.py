@@ -255,7 +255,7 @@ def menu():
     print('%s╠══[%s\x1b[0;97m8%s] %s\x1b[0;93mUser Agent'%(O,P,O,P))
     print('%s╠══[%s\x1b[0;97m9%s] %s%s'%(O,P,O,P,upgrade))
     print('%s╠══[%s\x1b[0;97m0%s] %s\x1b[0;91mLog Out'%(O,P,O,P))
-    pm = input('%s╠══[%s•%s] %sChoose : '%(O,P,O,P))
+    pm = input('%s╠══[%s•%s] %s\x1b[0;93mChoose : \x1b[0;92m'%(O,P,O,P))
     print('%s║'%(O))
     if pm in ['']:
         jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
@@ -295,7 +295,7 @@ def defaultua():
         menu_log()
 def ugen():
     var_ugen()
-    pmu = input('%s╠══[%s•%s] %sChoose : '%(O,P,O,P))
+    pmu = input('%s╠══[%s•%s] %s\x1b[0;93mChoose : \x1b[0;92m'%(O,P,O,P))
     print('%s║'%(O))
     if pmu in[""]:
         jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
@@ -306,37 +306,37 @@ def ugen():
         menu()
     elif pmu in ['2','02','002','b']:
         os.system("rm -rf ugent.txt")
-        ua = input("%s╚══[%s•%s] %sEnter User Agent : \n\n"%(O,P,O,P))
+        ua = input("%s╚══[%s•%s] %s\x1b[0;93mEnter User Agent : \x1b[0;92m\n\n"%(O,P,O,P))
         try:
             ugent = open('ugent.txt','w')
             ugent.write(ua)
             ugent.close()
-            jalan("\n%s╔══[ %sSuccesfully Changed User Agent %s]"%(O,P,O))
+            jalan("\n%s╔══[ %s\x1b[0;92mSuccesfully Changed User Agent %s]"%(O,P,O))
             print('%s║'%(O))
-            input('%s╚══[ %sReturn %s]%s'%(O,P,O,P))
+            input('%s╚══[ %s\x1b[0;93mReturn %s]%s'%(O,P,O,P))
             menu()
         except (KeyError,IOError):
-            jalan("\n%s╔══[ %sFailed to Change User Agent %s]"%(M,P,M))
+            jalan("\n%s╔══[ %s\x1b[0;91mFailed to Change User Agent %s]"%(M,P,M))
             print('%s║'%(M))
-            input('%s╚══[ %sBack %s]%s'%(M,P,M,P))
+            input('%s╚══[ %s\x1b[0;92mBack %s]%s'%(M,P,M,P))
             menu()
     elif pmu in ['3','03','003','c']:
         ugen_hp()
     elif pmu in ['4','04','004','d']:
         os.system("rm -rf ugent.txt")
-        jalan("%s╠══[ %sUser Agent Deleted Successfully %s]"%(O,P,O))
+        jalan("%s╠══[ %s\x1b[0;91mUser Agent Deleted Successfully %s]"%(O,P,O))
         print('%s║'%(O))
-        input('%s╚══[ %sReturn %s]%s'%(O,P,O,P))
+        input('%s╚══[ %s\x1b[0;92mReturn %s]%s'%(O,P,O,P))
         menu()
     elif pmu in ['5','05','005','e']:
         try:
             ungser = open('ugent.txt', 'r').read()
         except (KeyError,IOError):
             ungser = 'Not Found'
-        print("%s╚══[%s•%s] %sYour User Agent  : \n\n%s%s"%(O,P,O,P,O,ungser))
-        jalan("\n%s╔══[ %sThis is your current user agent %s]"%(O,P,O))
+        print("%s╚══[%s•%s] %s\x1b[0;93mYour User Agent  : \x1b[0;92m\n\n%s%s"%(O,P,O,P,O,ungser))
+        jalan("\n%s╔══[ %s\x1b[0;92mThis is your current user agent %s]"%(O,P,O))
         print('%s║'%(O))
-        input('%s╚══[ %sReturn %s]%s'%(O,P,O,P))
+        input('%s╚══[ %s\x1b[0;93mReturn %s]%s'%(O,P,O,P))
         menu()
     elif pmu in ['0','00','000','f']:
         menu()
@@ -344,14 +344,14 @@ def ugen():
         jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
 def ugen_hp():
     os.system("rm -rf ugent.txt")
-    print('%s╠══[%s1%s] %sXiaomi'%(O,P,O,P))
-    print('%s╠══[%s2%s] %sNokia'%(O,P,O,P))
-    print('%s╠══[%s3%s] %sAsus'%(O,P,O,P))
-    print('%s╠══[%s4%s] %sHuawei'%(O,P,O,P))
-    print('%s╠══[%s5%s] %sVivo'%(O,P,O,P))
-    print('%s╠══[%s6%s] %sOppo'%(O,P,O,P))
-    print('%s╠══[%s7%s] %sSamsung'%(O,P,O,P))
-    print('%s╠══[%s8%s] %sWindows'%(O,P,O,P))
+    print('%s╠══[%s1%s] %s\x1b[0;93mXiaomi'%(O,P,O,P))
+    print('%s╠══[%s2%s] %s\x1b[0;93mNokia'%(O,P,O,P))
+    print('%s╠══[%s3%s] %s\x1b[0;93mAsus'%(O,P,O,P))
+    print('%s╠══[%s4%s] %s\x1b[0;93mHuawei'%(O,P,O,P))
+    print('%s╠══[%s5%s] %s\x1b[0;93mVivo'%(O,P,O,P))
+    print('%s╠══[%s6%s] %s\x1b[0;93mOppo'%(O,P,O,P))
+    print('%s╠══[%s7%s] %s\x1b[0;93mSamsung'%(O,P,O,P))
+    print('%s╠══[%s8%s] %s\x1b[0;93mWindows'%(O,P,O,P))
     pc = input('%s╠══[%s•%s] %sChoose : '%(O,P,O,P))
     print('%s║'%(O))
     if pc in['']:jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P));menu()
@@ -372,9 +372,9 @@ def ugen_hp():
     elif pc in ['8','08']:
         ugent = open('ugent.txt','w');ugent.write(ua_windows);ugent.close()
     else:jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P));menu()
-    jalan("%s╠══[ %sSuccessfully Changed User Agent %s]"%(O,P,O))
+    jalan("%s╠══[ %s\x1b[0;92mSuccessfully Changed User Agent %s]"%(O,P,O))
     print('%s║'%(O))
-    input('%s╚══[ %sBack %s]%s'%(O,P,O,P))
+    input('%s╚══[ %s\x1b[0;93mBack %s]%s'%(O,P,O,P))
     menu()
 def publik():
     try:
@@ -386,7 +386,7 @@ def publik():
     except (KeyError,IOError):
         jid = '5000'
     except requests.exceptions.ConnectionError:
-        jalan('%s╚══[%s!%s] %sConnection Problem'%(M,P,M,P))
+        jalan('%s╚══[%s!%s] %s\x1b[0;92mConnection Problem'%(M,P,M,P))
         exit()
     try:
         token = open("token.txt","r").read()
@@ -394,22 +394,22 @@ def publik():
         y = json.loads(x.text)
         n = y['name']
     except (KeyError,IOError):
-        jalan('%s╚══[%s!%s] %sToken/Cookies Invalid'%(M,P,M,P))
+        jalan('%s╚══[%s!%s] %s\x1b[0;91mToken/Cookies Invalid'%(M,P,M,P))
         os.system('rm -rf token.txt')
         menu_log()
     except requests.exceptions.ConnectionError:
-        jalan('%s╚══[%s!%s] %sConnection Problem'%(M,P,M,P))
+        jalan('%s╚══[%s!%s] %s\x1b[0;92mConnection Problem'%(M,P,M,P))
         exit()
     try:
-        print('%s╠══[%s•%s] %sINPUT ID'%(O,P,O,P))
-        it = input("%s╠══[%s•%s] %sID Target : "%(O,P,O,P))
+        print('%s╠══[%s•%s] %s\x1b[0;93mINPUT ID'%(O,P,O,P))
+        it = input("%s╠══[%s•%s] %s\x1b[0;92mID Target : "%(O,P,O,P))
         try:
             pb = requests.get("https://graph.facebook.com/" + it + "?access_token=" + token)
             ob = json.loads(pb.text)
-            print ('%s╠══[%s•%s] %sName : %s'%(O,P,O,P,ob['name']))
+            print ('%s╠══[%s•%s] %s\x1b[0;93mName : \x1b[0;92m%s'%(O,P,O,P,ob['name']))
         except (KeyError,IOError):
             print('%s║'%(O))
-            jalan('%s╚══[%s!%s] %sID Not Found'%(M,P,M,P))
+            jalan('%s╚══[%s!%s] %s\x1b[0;91mID Not Found'%(M,P,M,P))
             menu()
         r = requests.get("https://graph.facebook.com/%s/friends?limit=%s&access_token=%s"%(it,jid,token))
         id = []
@@ -420,10 +420,10 @@ def publik():
             id.append(a["id"]+"•"+a["name"])
             xb.write(a["id"]+"•"+a["name"]+"\n")
         xb.close()
-        print('%s╠══[%s•%s] %sTotal ID : %s'%(O,P,O,P,len(id)))
+        print('%s╠══[%s•%s] %s\x1b[0;93mTotal ID :\x1b[0;92m %s'%(O,P,O,P,len(id)))
         return crack(xc)
     except Exception as e:
-        exit('%s╚══[%s!%s] %sError : %s'%(M,P,M,P,e))
+        exit('%s╚══[%s!%s] %s\x1b[0;93mError : \x1b[0;92m%s'%(M,P,M,P,e))
 def pengikut():
     try:
         lisensi = open("license.txt","r").read()
