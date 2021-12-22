@@ -203,11 +203,11 @@ def menu():
         jid = ''
     except (KeyError,IOError):
         status = '\x1b[0;92mPREMIUM'
-        users = '-'
-        maile = '-'
-        kunci = '-'
-        bergabung = '-'
-        kadaluarsa = '-'
+        users = '\x1b[0;92mSanz-Tzy'
+        maile = '\x1b[0;92mxxnxx.com@gmail.com'
+        kunci = '\x1b[0;92mXND-BBF-HAS'
+        Team = '\x1b[0;92mXNX CODE TEAM 2021'
+        Catatan = '\x1b[0;92mKunjungi Facebook me Bintang Tzy'
         pro = ("%s\x1b[0;93m[%s\x1b[0;92mPro%s\x1b[0;92m]"%(O,P,O))
         upgrade = ('\x1b[0;93mUpgrade To Version %sPro'%(O))
         jid = ('%s\x1b[0;93m[%s\x1b[0;92m5000 ID%s\x1b[0;93m]'%(O,P,O))
@@ -238,12 +238,12 @@ def menu():
     print('%s╠══[%s\x1b[0;97m•%s] %sID : %s'%(O,P,O,P,i))
     print('%s╠══[%s\x1b[0;97m•%s] %sIP : %s'%(O,P,O,P,ip))
     print('%s║'%(O))
-    print('%s╠══[%s\x1b[0;97m•%s] %sStatus : %s'%(O,P,O,P,status))
-    print('%s╠══[%s\x1b[0;97m•%s] %sName : %s'%(O,P,O,P,users))
-    print('%s╠══[%s\x1b[0;97m•%s] %sEmail : %s'%(O,P,O,P,maile))
-    print('%s╠══[%s\x1b[0;97m•%s] %sKey : %s'%(O,P,O,P,kunci))
-    print('%s╠══[%s\x1b[0;97m•%s] %sJoin Since : %s'%(O,P,O,P,bergabung))
-    print('%s╠══[%s\x1b[0;97m•%s] %sValid until : %s'%(O,P,O,P,kadaluarsa))
+    print('%s╠══[%s\x1b[0;97m•%s] %s\x1b[0;93mStatus : %s'%(O,P,O,P,status))
+    print('%s╠══[%s\x1b[0;97m•%s] %s\x1b[0;93mAuthor : %s'%(O,P,O,P,users))
+    print('%s╠══[%s\x1b[0;97m•%s] %s\x1b[0;93mEmail : %s'%(O,P,O,P,maile))
+    print('%s╠══[%s\x1b[0;97m•%s] %s\x1b[0;93mKey : %s'%(O,P,O,P,kunci))
+    print('%s╠══[%s\x1b[0;97m•%s] %s\x1b[0;93mTeam : %s'%(O,P,O,P,bergabung))
+    print('%s╠══[%s\x1b[0;97m•%s] %s\x1b[0;93mCatatan : %s'%(O,P,O,P,kadaluarsa))
     print('%s║'%(O))
     print('%s╠══[%s\x1b[0;97m1%s] %s\x1b[0;93mCrack From Public %s'%(O,P,O,P,jid))
     print('%s╠══[%s\x1b[0;97m2%s] %s\x1b[0;93mCrack From Follower %s'%(O,P,O,P,jid))
