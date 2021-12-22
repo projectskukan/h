@@ -206,7 +206,7 @@ def menu():
         users = '\x1b[0;92mSanz-Tzy'
         maile = '\x1b[0;92mxxnxx.com@gmail.com'
         kunci = '\x1b[0;92mXND-BBF-HAS'
-        Team = '\x1b[0;92mXNX CODE TEAM 2021'
+        kadaluarsa = '\x1b[0;92mXNX CODE TEAM 2021'
         bergabung = '\x1b[0;92mKunjungi Facebook me Bintang Tzy'
         pro = ("%s\x1b[0;93m[%s\x1b[0;92mPro%s\x1b[0;92m]"%(O,P,O))
         upgrade = ('\x1b[0;93mUpgrade To Version %sPro'%(O))
@@ -242,7 +242,7 @@ def menu():
     print('%s╠══[%s\x1b[0;97m•%s] %s\x1b[0;93mAuthor : %s'%(O,P,O,P,users))
     print('%s╠══[%s\x1b[0;97m•%s] %s\x1b[0;93mEmail : %s'%(O,P,O,P,maile))
     print('%s╠══[%s\x1b[0;97m•%s] %s\x1b[0;93mKey : %s'%(O,P,O,P,kunci))
-    print('%s╠══[%s\x1b[0;97m•%s] %s\x1b[0;93mTeam : %s'%(O,P,O,P,team))
+    print('%s╠══[%s\x1b[0;97m•%s] %s\x1b[0;93mTeam : %s'%(O,P,O,P, kadaluarsa))
     print('%s╠══[%s\x1b[0;97m•%s] %s\x1b[0;93mCatatan : %s'%(O,P,O,P,bergabung))
     print('%s║'%(O))
     print('%s╠══[%s\x1b[0;97m1%s] %s\x1b[0;93mCrack From Public %s'%(O,P,O,P,jid))
