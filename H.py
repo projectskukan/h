@@ -278,7 +278,9 @@ def menu():
         ugen()
     elif pm in ['9','09','009','i']:
         buy_license()
-    elif pm in ['0','00','000','j']:
+    elif pm in ['10','100','010','j']:
+        var_author()
+    elif pm in ['0','00','000','k']:
         jalan('%s╚══[%s!%s] %sSee you later'%(O,P,O,P))
         os.system('rm -rf token.txt')
         menu_log()
@@ -1349,6 +1351,29 @@ def target():
     print('%s║'%(O))
     input('%s╚══[ %s\x1b[0;93mReturn %s]%s'%(O,P,O,P))
     menu()
+
+def var_author():
+    mlaku('%s╔══[ %sAuthor & Team Project %s]'%(O,P,O))
+    mlaku('%s║'%(O))
+    mlaku('%s╠══[%s•%s] %sAuthor :'%(O,P,O,P))
+    mlaku('%s║     • %sPANTEK'%(O,P))
+    mlaku('%s║     • %sSPANTEK'%(O,P))
+    mlaku('%s║'%(O))
+    mlaku('%s╠══[%s•%s] %sTeam Project %sXNSCODE%s :'%(O,P,O,P,O,P))
+    mlaku('%s║     • %sPANTEK'%(O,P))
+    mlaku('%s║     • %sPANTEK'%(O,P))
+    mlaku('%s║     • %sPANTEK'%(O,P))
+    mlaku('%s║     • %sPANTEK '%(O,P))
+    mlaku('%s║     • %sPANTEK'%(O,P))
+    mlaku('%s║     • %sPANTEK'%(O,P))
+    mlaku('%s║     • %sPANTEK'%(O,P))
+    mlaku('%s║     • %sPANTEK'%(O,P))
+    mlaku('%s║     • %sPANTEK'%(O,P))
+    mlaku('%s║     • %sPANTEK'%(O,P))
+    mlaku('%s║     • %sPANTEK'%(O,P))
+    mlaku('%s║     • %sPANTEK'%(O,P))
+    mlaku('%s║'%(O))
+
 def teman_target():
     it = input('%s╠══[%s•%s] %s\x1b[0;93mID Target : \x1b[0;92m'%(O,P,O,P))
     try:
