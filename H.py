@@ -207,7 +207,7 @@ def menu():
         maile = '\x1b[0;92mxxnxx.com@gmail.com'
         kunci = '\x1b[0;92mXND-BBF-HAS'
         Team = '\x1b[0;92mXNX CODE TEAM 2021'
-        Catatan = '\x1b[0;92mKunjungi Facebook me Bintang Tzy'
+        bergabung = '\x1b[0;92mKunjungi Facebook me Bintang Tzy'
         pro = ("%s\x1b[0;93m[%s\x1b[0;92mPro%s\x1b[0;92m]"%(O,P,O))
         upgrade = ('\x1b[0;93mUpgrade To Version %sPro'%(O))
         jid = ('%s\x1b[0;93m[%s\x1b[0;92m5000 ID%s\x1b[0;93m]'%(O,P,O))
