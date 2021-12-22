@@ -72,7 +72,7 @@ def logo():
    def menu_log():
     os.system('rm -rf token.txt')
     clear()
-    banner()
+    logo()
     var_menu()
     pmu = input('%s╠══[%s•%s] %sChoose : '%(O,P,O,P))
     print('%s║'%(O))
