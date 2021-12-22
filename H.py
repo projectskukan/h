@@ -67,8 +67,6 @@ def logo():
  \x1b[1;92m/______  /          \x1b[1;93m\____|__  /\____|__  /\x1b[1;92m/_______ \  
  \x1b[1;92m       \/     \x1b[1;93m              \/         \/         \x1b[1;92m\/    """%(N))
  
-
-   def menu_log():
     os.system('rm -rf token.txt')
     clear()
     logo()
